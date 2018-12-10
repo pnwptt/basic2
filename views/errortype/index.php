@@ -1,5 +1,8 @@
 <?php 
-use yii\helpers\Html;
+    use yii\helpers\Html;
+
+    $this->title = 'Errorcode Type';
+    $this->params['breadcrumbs'][] = $this->title;
 ?>
 <!DOCTYPE html>
 <html>

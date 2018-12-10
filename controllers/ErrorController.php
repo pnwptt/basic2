@@ -43,7 +43,7 @@ class ErrorController extends Controller
 		$type = ArrayHelper::map($typeall,'i_errorcode_type_id','n_errorcode_type');
 
 		if(!empty($_POST))
-		{
+		{                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 			$errorcode->n_errorcode = $_POST['Errorcode']['n_errorcode'];
 			$errorcode->c_rank = $_POST['Errorcode']['c_rank'];
 			$errorcode->c_code = $_POST['Errorcode']['c_code'];
@@ -60,6 +60,11 @@ class ErrorController extends Controller
 			'type'=>$type,
 		]);
 
-	} 
+	}
+	// function actionDelete(){
+	// 	Errorcode::findone($errorcode)->delete();
+
+	// 	return $this->redirect('index');
+	// }
 
 }

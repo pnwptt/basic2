@@ -38,8 +38,17 @@
             text-align: left;    
         }
         table {
-            border: 1px !important;
-            padding: 0px;
+           /* border: 1px black !important;
+            padding: 0px;*/
+        }
+        .b1 tr{
+          border: 1px solid black !important;
+        }
+        .b1 th{
+          border: 1px solid black !important;
+        }
+        .b1 td{
+          border: 1px solid black !important;
         }
     </style>
     <body>
@@ -51,7 +60,7 @@
                             'action' => 'form',
                             'options' => ['enctype'=>'multipart/form-data']
                         ]); ?> 
-                        <table width="100%">
+                        <table align="center">
                             <tr> 
                                 
                                 <!-- ******************************************************************************* -->
@@ -81,7 +90,7 @@
                     'action' => 'form',
                     'options' => ['enctype'=>'multipart/form-data']
                 ]); ?> 
-                <table width="100%" style="width: 100%;">
+                <table width="100%">
                     <tr>
                         <td width="">
                             <label>Order number: </label><br>
@@ -105,8 +114,8 @@
                             <b class="">Refference to WI-QA-001<hr>
                             <i>Lot judgement</i><br></b>
                             <label>
-                                <input type="checkbox" name="" value="accept"> Accpet 
-                                <input type="checkbox" name="" value="reject"> Reject <br>
+                                <input type="radio" name="" value="accept"> Accpet  
+                                <input type="radio" name="" value="reject"> Reject <br>
                                 NCR No: <input type="text" value="" size="8"><br>
                                 8D Report No: <input type="text" value="" size="8"><br>
                             </label>   
@@ -128,7 +137,7 @@
                     'action' => 'form',
                     'options' => ['enctype'=>'multipart/form-data']
                 ]); ?> 
-                <table border="1" width="100%">
+                <table class="b1" width="100%">
                     <thead>
                         <tr>
                             <td align="center" rowspan="2" bgcolor="#DCDCDC"><b>Item no.</b></td>
@@ -139,11 +148,11 @@
                             <td align="center" rowspan="2" bgcolor="#FAEBD7"><b>Total</b></td>
                         </tr>
                         <tr>
-                            <td height="120" bgcolor="#F0F8FF" align="center"><span class="textAlignVer">61019850</span></td>
-                            <td bgcolor="#FFF5EE" align="center"><span class="textAlignVer"><input type="text" size="5"><?php // ?></span></td>
+                            <td height="120" bgcolor="#F0F8FF" align="center" valign="bottom"><span class="textAlignVer">61019850</span></td>
+                            <td bgcolor="#FFF5EE" align="center" valign="bottom"><span class="textAlignVer"><input type="text" size="5"><?php // ?></span></td>
                         </tr>
                     </thead>
-                    <tbody border="1">
+                    <tbody>
                         <tr>
                             <td colspan="7" bgcolor="#CCFFCC"><i>Measurement</i></td>
                         </tr>

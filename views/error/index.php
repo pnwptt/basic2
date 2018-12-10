@@ -1,5 +1,8 @@
 <?php 
-use yii\helpers\Html;
+    use yii\helpers\Html;
+
+    $this->title = 'Errorcode';
+    $this->params['breadcrumbs'][] = $this->title;
 ?>
 <!DOCTYPE html>
 <html>
@@ -54,6 +57,15 @@ use yii\helpers\Html;
                                                                         // $options = ['class' => 'btn btn-xs btn-danger',]
                                                             Html::a( 'Edit', ['form', 'i_errorcode_id'=> $errorcode], ['$e'=>'i_errorcode_id'] ) 
                                                             ?>
+                                                            <?php
+                                                            Html::a('Delete', ['form', 'i_errorcode_id'=> $errorcode], ['class' => 'btn btn-danger',
+                                                                'data' => [
+                                                                    'confirm' => 'Are you sure you want to delete this item?',
+                                                                    'method' => 'post',
+                                                                ],
+                                                              ])
+                                                            ?>
+
 
                                                             <button type="submit" class="btn btn-xs btn-danger" onClick="return confirm('Are you sure you want to delete?')"><i class="fas fa-trash-alt"></i></button>
                                                         </div>   

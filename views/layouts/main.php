@@ -65,7 +65,6 @@ AppAsset::register($this);
                 )
                 . Html::endForm()
                 . '</li>'
-                
             )
         ],
     ]);
