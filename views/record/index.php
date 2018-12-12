@@ -103,7 +103,7 @@
                         <td width="">
                             <label>
                                 <input type="text"><?php //echo $f->field($record, 'c_order_number'); ?><br> 
-                                <input type="text"><br> 
+                                <input type="text"><?php //echo $f->field($record, 'c_part_number'); ?><br> 
                                 <input type="text"><br> 
                                 <input type="text"><br> 
                                 <input type="text"><br> 
