@@ -48,10 +48,17 @@
                                                     <td align="center"><?php echo $s->i_pallet_qty; ?></td>
                                                     <td align="center">
                                                         <div class="box-footer" align="center">
-                                                            <?= Html::a('Edit', ['form', 'i_series_id'=>$series], ['$s'=>'i_series_id']) ?>
-                                                        
+                                                            <span><?=  // $options = ['class' => 'btn btn-xs btn-danger',] ['$e'=>'i_errorcode_id']
+                                                                Html::a('Update', ['update', 'i_series_id'=> $s->i_series_id], ['class'=> 'label label-default'] );?></span>
+                                                          
                                                         <!-- <button type="button" class="btn btn-success" href="/edit/" onClick="addHtmlTableRow()"><i class="fa fa-edit"></i></button> -->
-                                                        <button type="submit" class="btn btn-xs btn-danger" onClick="return confirm('Are you sure you want to delete?')" ><i class="fas fa-trash-alt"></i></button>
+                                                         <span><?= Html::a('Delete', ['delete', 'i_series_id'=> $s->i_series_id], ['class' => 'label label-danger',
+                                                                'data' => [
+                                                                    'confirm' => 'Are you sure you want to delete this item?',
+                                                                    'method' => 'post',
+                                                                ],
+                                                              ])
+                                                        ?></span>
                                                         </div>
                                                     </td>
                                                 </tr>

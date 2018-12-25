@@ -4,6 +4,9 @@ use yii\db\ActiveRecord;
 use yii;
 
 class Series extends ActiveRecord{
+
+  public $primaryKey = "i_series_id";
+
   public static function tableName(){
     return 'b_series';
   }

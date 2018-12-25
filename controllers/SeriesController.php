@@ -67,13 +67,22 @@ class SeriesController extends Controller
 		]);
 	}
 
-	public function actionIndexdelete ($i_series_id) {
-		$series = \models\series::find()->where(['i_series_id'=>$i_series_id])->one();
-
-		if (!empty($i_series_id)){
-			if ($series->delete()) {
-				return $series->redirect(['index']);
+	function actionUpdate() {
+		$model = Series::findOne($_GET['i_series_id']);
+		if ($model->load(Yii::$app->request->post())){
+			if ($model->save()){
+				return $this->redirect(['index']);
 			}
 		}
+
+		return $this->render('update', [
+			'series'=>$model,
+		]);
+	}
+
+	function actionDelete(){
+		$model = Series::findOne($_GET['i_series_id']);
+		$model->delete();
+		return $this->redirect(['index']);
 	}
 }

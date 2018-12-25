@@ -15,10 +15,11 @@
 <html>
     <head>
     	<title>Record Form</title>
+        
     </head>
     <style type="text/css">
         body{
-            font-size:12px; 
+            font-size:14px; 
         }
         .textAlignVer{
             display:block;
@@ -74,7 +75,7 @@
                                     </b>
                                 </th>
                                 <td class="">
-                                    <?php // Html::img('img/bernina_logo.png'); ?>
+                                    <?php // Html::img('img/bernina_logo.png') โลโก้บริษัท; ?>
                                 </td>
                                 <!-- ******************************************************************************* -->
                             </tr>
@@ -104,26 +105,26 @@
                             <label>
                                 <input type="text"><?php //echo $f->field($record, 'c_order_number'); ?><br> 
                                 <input type="text"><?php //echo $f->field($record, 'c_part_number'); ?><br> 
-                                <input type="text"><br> 
-                                <input type="text"><br> 
-                                <input type="text"><br> 
-                                <input type="text">  
+                                <input type="text"><?php //echo $f->field($record, 'c_part_name'); ?><br> 
+                                <input type="text"><?php //echo $f->field($record, 'customer'); ?> <br> 
+                                <input type="text"><?php //echo $f->field($record, 'qty'); ?><br> 
+                                <input type="text"><?php //<!-- คำนวน samling qty จาก qty  --> ?>  
                             </label>
                         </td>
                         <td width="" align="center">
                             <b class="">Refference to WI-QA-001<hr>
                             <i>Lot judgement</i><br></b>
                             <label>
-                                <input type="radio" name="" value="accept"> Accpet  
-                                <input type="radio" name="" value="reject"> Reject <br>
-                                NCR No: <input type="text" value="" size="8"><br>
+                                <input type="radio" name="" value="accept">Accpet&nbsp;
+                                <input type="radio" name="" value="reject">Reject<br>
+                                NCR No: <input type="text" value="" size="8">&nbsp;
                                 8D Report No: <input type="text" value="" size="8"><br>
                             </label>   
                         </td>
                         <td class="" width="" align="center">
-                            <label>Check by  <input type="text" value="" size="11"><br></label>
+                            <label>Check by  <input type="text" value="" size="11"><br></label>&nbsp;
                             <label>Date: <input type="date" value="" ></label><br><hr>
-                            <label>Approved by <input type="text" value="" size="8"></label>
+                            <label>Approved by <input type="text" value="" size="8"></label>&nbsp;
                             <label>Date: <input type="date" value=""></label><br>
                         </td>
                     </tr>
@@ -140,77 +141,77 @@
                 <table class="b1" width="100%">
                     <thead>
                         <tr>
-                            <td align="center" rowspan="2" bgcolor="#DCDCDC"><b>Item no.</b></td>
-                            <td align="center" rowspan="2" bgcolor="#FAEBD7"><b>Error code</b></td>
-                            <td align="center" rowspan="2" bgcolor="#DCDCDC"><b>Inspection detail</b></td>
-                            <td align="center" colspan="2" bgcolor="#FAEBD7"><b>Machine no.</b></td>
-                            <td align="center" rowspan="2" bgcolor="#DCDCDC"><b>Reject detail</b></td>
-                            <td align="center" rowspan="2" bgcolor="#FAEBD7"><b>Total</b></td>
+                            <td align="center" rowspan="2" ><b>Item no.</b></td>
+                            <td align="center" rowspan="2" ><b>Error code</b></td>
+                            <td align="center" rowspan="2" ><b>Inspection detail</b></td>
+                            <td align="center" colspan="2" ><b>Machine no.</b></td>
+                            <td align="center" rowspan="2" ><b>Reject detail</b></td>
+                            <td align="center" rowspan="2" ><b>Total</b></td>
                         </tr>
                         <tr>
-                            <td height="120" bgcolor="#F0F8FF" align="center" valign="bottom"><span class="textAlignVer">61019850</span></td>
-                            <td bgcolor="#FFF5EE" align="center" valign="bottom"><span class="textAlignVer"><input type="text" size="5"><?php // ?></span></td>
+                            <td height="120"  align="center" valign="bottom"><span class="textAlignVer">61019850</span></td>
+                            <td align="center" valign="bottom"><span class="textAlignVer"><input type="text" size="5"><?php // ?></span></td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td colspan="7" bgcolor="#CCFFCC"><i>Measurement</i></td>
+                            <td colspan="7" ><i>Measurement</i></td>
                         </tr>
                         <tr>
-                            <td align="center" bgcolor="#FAF0E6">1</td>
-                            <td align="center" bgcolor="#AFEEEE"><input type="text" size="5"></td>
-                            <td bgcolor="#FFFFCC"><?php //ดึงชื่อ errorcode มาใส่ ?></td>
-                            <td bgcolor="#F0F8FF" align="center"><input type="text" size="3"></td>
-                            <td bgcolor="#FFF5EE" align="center"><input type="text" size="3"></td>
-                            <td align="center" bgcolor="#F5F5F5"><input type="text" size="6"></td>
-                            <td bgcolor="#FAFAD2" align="center"><input type="text" size="5"></td>
+                            <td align="center" >1 <!-- รันจำนวนเต็ม --> </td>
+                            <td align="center" ><input type="text" size="5"></td>
+                            <td ><?php //ดึงชื่อ errorcode มาใส่ เมื่อพิมพ์ errorcode?></td>
+                            <td align="center"><input type="text" size="3"></td>
+                            <td align="center"><input type="text" size="3"></td>
+                            <td align="center" ><input type="text" size="6"></td>
+                            <td align="center"><input type="text" size="5"></td>
                         </tr>
                         <tr>
-                            <td colspan="7" bgcolor="#CCFFCC"><i>Test Specification</i></td>
+                            <td colspan="7" ><i>Test Specification</i></td>
                         </tr>
                         <tr>
-                            <td align="center" bgcolor="#FAF0E6">1</td>
-                            <td align="center" bgcolor="#AFEEEE"><input type="text" size="5"></td>
-                            <td bgcolor="#FFFFCC"><?php //ดึงชื่อ errorcode มาใส่ ?></td>
-                            <td bgcolor="#F0F8FF" align="center"><input type="text" size="3"></td>
-                            <td bgcolor="#FFF5EE" align="center"><input type="text" size="3"></td>
-                            <td align="center" bgcolor="#F5F5F5"><input type="text" size="6"></td>
-                            <td bgcolor="#FAFAD2" align="center"><input type="text" size="5"></td>
+                            <td align="center" >1 <!-- รันตามจำนวนเต็ม --></td>
+                            <td align="center" ><input type="text" size="5"></td>
+                            <td ><?php //ดึงชื่อ errorcode มาใส่ ?></td>
+                            <td align="center"><input type="text" size="3"></td>
+                            <td align="center"><input type="text" size="3"></td>
+                            <td align="center" ><input type="text" size="6"></td>
+                            <td align="center"><input type="text" size="5"></td>
                         </tr>
                         <tr>
-                            <td colspan="7" bgcolor="#CCFFCC"><i>Failure symptom</i></td>    
+                            <td colspan="7" ><i>Failure symptom</i></td>    
                         </tr>
                         <tr>
-                            <td align="center" bgcolor="#FAF0E6">1</td>
-                            <td align="center" bgcolor="#AFEEEE"><input type="text" size="5"></td>
-                            <td bgcolor="#FFFFCC"><?php //ดึงชื่อ errorcode มาใส่ ?></td>
-                            <td bgcolor="#F0F8FF" align="center"><input type="text" size="3"></td>
-                            <td bgcolor="#FFF5EE" align="center"><input type="text" size="3"></td>
-                            <td align="center" bgcolor="#F5F5F5"><input type="text" size="6" ></td>
-                            <td bgcolor="#FAFAD2" align="center"><input type="text" size="5"></td>
+                            <td align="center" >1</td>
+                            <td align="center" ><input type="text" size="5"></td>
+                            <td ><?php //ดึงชื่อ errorcode มาใส่ ?></td>
+                            <td align="center"><input type="text" size="3"></td>
+                            <td align="center"><input type="text" size="3"></td>
+                            <td align="center" ><input type="text" size="6" ></td>
+                            <td align="center"><input type="text" size="5"></td>
                         </tr>
                         <tr>
-                            <td colspan="3" align="center" bgcolor="#FFB6C1"><b>Total</b></td>
-                            <td bgcolor="#F0F8FF" align="center"><input type="text" size="3"></td>
-                            <td bgcolor="#FFF5EE" align="center"><input type="text" size="3"></td>
-                            <td align="center" bgcolor="#F5F5F5"><input type="text" size="6" ></td>
-                            <td bgcolor="#FAFAD2" align="center"><input type="text" size="5"></td>
+                            <td colspan="3" align="center"><b>Total</b></td>
+                            <td align="center"><input type="text" size="3"></td>
+                            <td align="center"><input type="text" size="3"></td>
+                            <td align="center"><input type="text" size="6" ></td>
+                            <td align="center"><input type="text" size="5"></td>
                         </tr>
                         <tr>
-                            <td colspan="3" align="center" bgcolor="#FFF8DC"><b>Pallet#</b></td>
-                            <td colspan="2" align="center" bgcolor="#FFFFF0"><input type="text" size="5"></td>
-                            <td rowspan="3" align="center" bgcolor="#F8F8FF"><b>Total R/J (M/C)</b></td>
-                            <td bgcolor="#FAFAD2" align="center"><input type="text" size="5"></td>
+                            <td colspan="3" align="center"><b>Pallet#</b></td>
+                            <td colspan="2" align="center"><input type="text" size="5"></td>
+                            <td rowspan="3" align="center"><b>Total R/J (M/C)</b></td>
+                            <td align="center"><input type="text" size="5"></td>
                         </tr>
                         <tr>
-                            <td colspan="3" align="center" bgcolor="#FFB6C1"><b>Accept</b></td>
-                            <td colspan="2" align="center" bgcolor="#FFFFF0"><input type="text" size="5"></td>
-                            <td bgcolor="#FAFAD2" align="center"><input type="text" size="5"></td>
+                            <td colspan="3" align="center"><b>Accept</b></td>
+                            <td colspan="2" align="center"><input type="text" size="5"></td>
+                            <td align="center"><input type="text" size="5"></td>
                         </tr>
                         <tr>
-                            <td colspan="3" align="center" bgcolor="#FFF8DC"><b>Reject</b></td>
-                            <td colspan="2" align="center" bgcolor="#FFFFF0"><input type="text" size="5"></td>
-                            <td bgcolor="#FAFAD2" align="center"><input type="text" size="5"></td>
+                            <td colspan="3" align="center"><b>Reject</b></td>
+                            <td colspan="2" align="center"><input type="text" size="5"></td>
+                            <td align="center"><input type="text" size="5"></td>
                         </tr>
                     </tbody>
                 </table>

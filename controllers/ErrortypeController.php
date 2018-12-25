@@ -59,4 +59,22 @@ class ErrortypeController extends Controller
 			'errortype'=>$errortype,
 		]);
 	}
+
+	function actionUpdate(){
+		$model = errorType::findOne($_GET['i_errorcode_type_id']);
+		if ($model->load(Yii::$app->request->post())) {
+			if ($model->save()) {
+				return $this->redirect(['index']);
+			}
+		}
+		return $this->render('update' ,[
+			'errortype' => $model,
+		]);
+	}
+
+	function actionDelete(){
+		$model = errorType::findOne($_GET['i_errorcode_type_id']);
+		$model->delete();
+		return $this->redirect(['index']);
+	}
 }

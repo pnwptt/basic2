@@ -1,6 +1,8 @@
 <?php
     use yii\widgets\ActiveForm;
     use yii\web\Session;
+    use yii\helpers\Html;
+
     //use dosamigos\tinymce\TinyMce;
     //use dosamigos\ckeditor\CKEditor;;
 
@@ -32,15 +34,15 @@
                         <div class="row">
                             <div class="col-lg-12" >
                                <?php $f = ActiveForm::begin([
-                                    'action' => 'form',
+                                    'action' => "update?i_errorcode_type_id=$errortype->i_errorcode_type_id",
                                     'options' => ['enctype'=>'multipart/form-data']
                                 ]);?> 
                                     <div class="form-group"> 
                                         <?php echo $f->field($errortype,'n_errorcode_type')->label('Errorcode type name'); ?>
                                     </div>
                                     <div class="box-footer" align="center">
-                                        <button type="button" class="btn btn-default" onclick="window.history.back()">Cancel</button>
-                                        <button type="submit" class="btn btn-primary " onclick="return confirm('Are you sure?')">Submit</button>
+                                        <?= Html::submitButton('Save', ['class'=>'btn btn-primary']); ?>
+                                        <button type="button" class="btn btn-default " onclick="window.history.back()">Cancel</button>
                                     </div><!--/box-footer-->
                                  <?php ActiveForm::end(); ?>
                             </div>

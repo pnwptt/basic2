@@ -1,16 +1,16 @@
 <?php
 
-/* @var $this \yii\web\View */
-/* @var $content string */
+    /* @var $this \yii\web\View */
+    /* @var $content string */
 
-use app\widgets\Alert;
-use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
-use app\assets\AppAsset;
+    use app\widgets\Alert;
+    use yii\helpers\Html;
+    use yii\bootstrap\Nav;
+    use yii\bootstrap\NavBar;
+    use yii\widgets\Breadcrumbs;
+    use app\assets\AppAsset;
 
-AppAsset::register($this);
+    AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -32,64 +32,64 @@ AppAsset::register($this);
         </style>
     </head>
     <body>
-    <?php $this->beginBody() ?>
+        <?php $this->beginBody() ?>
 
-    <div class="wrap">
-        <?php
-        NavBar::begin([
-            'brandLabel' => Yii::$app->name,
-            'brandUrl' => Yii::$app->homeUrl,
-            'options' => [
-                'class' => 'navbar-default navbar-fixed-top',
-            ],
-        ]);
-        echo Nav::widget([
-            'options' => ['class' => 'navbar-nav navbar-right'],
-            'items' => [
-                ['label' => 'Home', 'url' => ['/site/index']],
-                // ['label' => 'Accessories', 'url' => ['/accessories/index']],
-                // ['label' => 'Member', 'url' => ['/member/index']],
-                ['label' => 'Series', 'url' => ['/series/index']],
-                ['label' => 'Errorcode', 'url' => ['/error/index']],
-                ['label' => 'Errorcode Type', 'url' => ['/errortype/index']],
-                ['label' => 'PPA Record Form', 'url' => ['/record/index']],
-                ['label' => 'Create form', 'url' => ['/create/index']],
-                // ['label' => 'Contact', 'url' => ['/site/contact']],
-                !Yii::$app->session->get('c_user') ? (
-                    ['label' => 'Login', 'url' => ['/site/login']]
-                ) : (      
-                    '<li>'
-                    . Html::beginForm(['/site/logout'], 'post')
-                    . Html::submitButton(
-                        'Logout (' . Yii::$app->session->get('c_user').')',
-                        ['class' => 'btn btn-danger']
+        <div class="wrap">
+            <?php
+            NavBar::begin([
+                'brandLabel' => Yii::$app->name,
+                'brandUrl' => Yii::$app->homeUrl,
+                'options' => [
+                    'class' => 'navbar-default navbar-fixed-top',
+                ],
+            ]);
+            echo Nav::widget([
+                'options' => ['class' => 'navbar-nav navbar-right'],
+                'items' => [
+                    ['label' => 'Home', 'url' => ['/site/index']],
+                    // ['label' => 'Accessories', 'url' => ['/accessories/index']],
+                    // ['label' => 'Member', 'url' => ['/member/index']],
+                    ['label' => 'Series', 'url' => ['/series/index']],
+                    ['label' => 'Errorcode', 'url' => ['/error/index']],
+                    ['label' => 'Errorcode Type', 'url' => ['/errortype/index']],
+                    ['label' => 'PPA Record Form', 'url' => ['/record/index']],
+                    // ['label' => 'Create form', 'url' => ['/create/index']],
+                    // ['label' => 'Contact', 'url' => ['/site/contact']],
+                    !Yii::$app->session->get('c_user') ? (
+                        ['label' => 'Login', 'url' => ['/site/login']]
+                    ) : (      
+                        '<li>'
+                        . Html::beginForm(['/site/logout'], 'post')
+                        . Html::submitButton(
+                            'Logout (' . Yii::$app->session->get('c_user').')',
+                            ['class' => 'btn btn-danger']
+                        )
+                        . Html::endForm()
+                        . '</li>'
                     )
-                    . Html::endForm()
-                    . '</li>'
-                )
-            ],
-        ]);
-        NavBar::end();
-        ?>
+                ],
+            ]);
+            NavBar::end();
+            ?>
 
-        <div class="container">
-            <?= Breadcrumbs::widget([
-                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-            ]) ?>
-            <?= Alert::widget() ?>
-            <?= $content ?>
+            <div class="container">
+                <?= Breadcrumbs::widget([
+                    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                ]) ?>
+                <?= Alert::widget() ?>
+                <?= $content ?>
+            </div>
         </div>
-    </div>
 
-    <footer class="footer">
-        <div class="container">
-            <p class="pull-left">&copy; Bernina Thailand <?= date('Y') ?></p>
+        <footer class="footer">
+            <div class="container">
+                <p class="pull-left">&copy; Bernina Thailand <?= date('Y') ?></p>
 
-            <!-- <p class="pull-right"><em>Powered by </em><span class="text-primary">Jirawat Khanfan</span></p> -->
-        </div>
-    </footer>
+                <!-- <p class="pull-right"><em>Powered by </em><span class="text-primary">Jirawat Khanfan</span></p> -->
+            </div>
+        </footer>
 
-    <?php $this->endBody() ?>
+        <?php $this->endBody() ?>
     </body>
 </html>
 <?php $this->endPage() ?>

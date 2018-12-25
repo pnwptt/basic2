@@ -28,22 +28,35 @@ class ErrorController extends Controller
 	}
 
 	function actionAdd(){
-		return $this->render('Add');
+		return $this->render('add');
+		// $formData = Yii::$app->request->errorcode();
+		// if($errorcode->load($formData)){
+		// 	if($errorcode->save()){
+		// 		Yii::$app->getSession()->setFlash('message', 'Successfully');
+		// 		return $this->render('index');
+		// 	}
+		// 	else{
+		// 		Yii::$app->getSession()->setFlash('message', 'Failed');
+		// 	}
+		// }
+		// return $this->render('add', ['errorcode'=>$erorcode]);
 	} 
 
-	function actionForm($i_errorcode_id = null){
+	function actionForm($i_errorcode_id = null) {
 
 		$errorcode = new Errorcode();
 		
-		if(!empty($i_errorcode_id)){
-			$errorcode = Errorcode::findone($errorcode);
+		if(!empty($i_errorcode_id)) {
+			$errorcode = Errorcode::findOne($errorcode);
 		}
 
 		$typeall = Type::find()->orderBy('n_errorcode_type asc')->all();
 		$type = ArrayHelper::map($typeall,'i_errorcode_type_id','n_errorcode_type');
 
+		//var_dump($type);
+
 		if(!empty($_POST))
-		{                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+		{                                                                           
 			$errorcode->n_errorcode = $_POST['Errorcode']['n_errorcode'];
 			$errorcode->c_rank = $_POST['Errorcode']['c_rank'];
 			$errorcode->c_code = $_POST['Errorcode']['c_code'];
@@ -55,16 +68,54 @@ class ErrorController extends Controller
 			}
 		}
 
-		return $this->render('form',[
+		return $this->render('form', [
 			'errorcode'=>$errorcode,
 			'type'=>$type,
 		]);
-
 	}
-	// function actionDelete(){
-	// 	Errorcode::findone($errorcode)->delete();
 
-	// 	return $this->redirect('index');
+	// function actionView(){
+	// 	$errorcode = Errorcode::fineOne($errorcode);
+	// 	return $this->render('view', ['errorcode'=>$errorcode]);
 	// }
 
+	// function actionUpdate() {
+	// 	$i_errorcode_id = $_GET['i_errorcode_id'];
+
+	// 	$model = Errorcode::findOne($i_errorcode_id);
+	// 	$model->loadErrorcode();
+
+	// 	if ($model->load(Yii::$app->request->post()))
+	// 	{
+	// 		if ($model->save()) {
+	// 			$model->saveErrorcode();
+	// 			return $this->redirect(['index']);
+	// 		}
+	// 	}
+	// 	return $this->render('update', [
+	// 		'model' => $model,
+	// 		'errorcode' => Errorcode::getAvailableErrorcode(),
+	// 	]);
+	// }
+	function actionUpdate() {
+		$model = Errorcode::findOne($_GET['i_errorcode_id']);
+		if ($model->load(Yii::$app->request->post())) {
+			if ($model->save()) {
+				return $this->redirect(['index']);
+			}
+		}
+
+		$typeall = Type::find()->orderBy('n_errorcode_type asc')->all();
+		$type = ArrayHelper::map($typeall,'i_errorcode_type_id', 'n_errorcode_type');
+		return $this->render('update',[
+			'errorcode'=>$model,
+			'type'=>$type,
+		]);
+	}
+
+	function actionDelete() {
+		$model = Errorcode::findOne($_GET['i_errorcode_id']);
+		$model->delete();
+		return $this->redirect(['index']);
+	}
 }

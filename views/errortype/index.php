@@ -44,10 +44,16 @@
                                                     <td align="center"><?php echo $et->n_errorcode_type; ?></td>
                                                     <td align="center">
                                                         <div class="box-footer" align="center">
-                                                            <?= Html::a('Edit', ['form', 'i_errorcode_type_id'=>$errortype], ['$et'=>'i_errorcode_type_id']) ?>
+                                                            <?= Html::a('Update', ['update', 'i_errorcode_type_id'=> $et->i_errorcode_type_id], ['class'=> 'label label-default']) ?>
                                                         
                                                         <!-- <button type="button" class="btn btn-success" href="/edit/" onClick="addHtmlTableRow()"><i class="fa fa-edit"></i></button> -->
-                                                        <button type="submit" class="btn btn-xs btn-danger" onClick="return confirm('Are you sure you want to delete?')" ><i class="fas fa-trash-alt"></i></button>
+                                                        <span><?= Html::a('Delete', ['delete', 'i_errorcode_type_id'=> $et->i_errorcode_type_id], ['class' => 'label label-danger',
+                                                                'data' => [
+                                                                    'confirm' => 'Are you sure you want to delete this item?',
+                                                                    'method' => 'post',
+                                                                ],
+                                                              ])
+                                                        ?></span>
                                                         </div>
                                                     </td>
                                                 </tr>
