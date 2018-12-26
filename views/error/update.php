@@ -53,10 +53,10 @@
                                                 <?php echo $f->field($errorcode,'c_code')->label('Code'); ?> 
                                             </div>
                                         </div>
-                                        <div class="form-group" align="center">
+                                        <div class="form-group">
                                             <div class="col-lg-6">
                                                 <?php echo $f->field($errorcode,'i_errorcode_type_id')
-                                                ->dropdownList($type,['style'=>'width: 200px'])->label('Type'); ?>
+                                                ->dropdownList($type)->label('Type'); ?>
                                             </div>
                                         </div>
                                         <div class="row" align="center">

@@ -51,7 +51,7 @@
                                                         <td align="center"><?php echo $e->c_rank; ?></td>
                                                         <td align="center"><?php echo $e->c_code; ?></td>
                                                         <td><?php echo $e->n_errorcode; ?></td>
-                                                        <td align="center"><?php echo $e->type['n_errorcode_type']; ?></td>
+                                                        <td><?php echo $e->type['n_errorcode_type']; ?></td>
                                                         <td>
                                                             <div class="box-footer" align="center">
                                                                 <!-- <span> //Html::a('View', ['index', 'i_errorcode_id'=>$errorcode], ['class'=> 'label label-primary']);?></span> -->

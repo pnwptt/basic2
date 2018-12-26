@@ -13,7 +13,7 @@
     	<div id="page-wrapper" style="min-height: 99px;">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="page-header" style="color:#930000">Series</h1>
+                    <h2 class="page-header" style="color:#930000">Series</h2>
                 </div>
             </div>
             <div class="row">
