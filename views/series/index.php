@@ -34,7 +34,7 @@
                                         <table width="100%" class="table table-striped table-bordered table-hover dataTable on-footer dtr-inline" id="dataTables-example" role="grid" aria-describedby="dataTables-example-info" style="width: 100%;">
                                             <thead>
                                                 <tr>
-                                                    <th>Serie code</th>
+                                                    <!-- <th>Serie code</th> -->
                                                     <th>Serie name</th>
                                                     <th>Quantity/Pallet</th>
                                                     <th>Action</th>
@@ -43,7 +43,7 @@
                                             <tbody>
                                                 <?php foreach ($series as $s):?> 
                                                 <tr>
-                                                    <td align="center"><?php echo $s->c_series_code; ?></td>
+                                                    <!-- <td align="center"><?php //echo $s->c_series_code; ?></td> -->
                                                     <td align="center"><?php echo $s->n_series_name; ?></td>
                                                     <td align="center"><?php echo $s->i_pallet_qty; ?></td>
                                                     <td align="center">

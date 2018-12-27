@@ -11,6 +11,12 @@ class Checklists extends ActiveRecord{
     return 'b_checklists';
   }
 
+  public function getType()
+	{
+		return $this->hasOne(Series::className(),['i_series_id'
+			=>'i_series_id']);
+	}
+
 //   public function rules() {
 //   	return [
 //   		[['c_series_code', 'n_series_name', 'i_pallet_qty'], 'required']

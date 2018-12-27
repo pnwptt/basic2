@@ -35,9 +35,9 @@
                                     'action' => 'form',
                                     'options' => ['enctype'=>'multipart/form-data']
                                 ]);?> 
-                                    <div class="form-group"> 
-                                        <?php echo $f->field($series,'c_series_code')->label('Serie code'); ?>
-                                    </div>
+                                    <!-- <div class="form-group"> 
+                                        <?php //echo $f->field($series,'c_series_code')->label('Serie code'); ?>
+                                    </div> -->
                                     <div class="form-group">
                                         <?php echo $f->field($series,'n_series_name')->label('Serie name'); ?>
                                     </div>

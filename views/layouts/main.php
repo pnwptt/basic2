@@ -52,8 +52,9 @@
                     ['label' => 'Series', 'url' => ['/series/index']],
                     ['label' => 'Errorcode', 'url' => ['/error/index']],
                     ['label' => 'Errorcode Type', 'url' => ['/errortype/index']],
-                    ['label' => 'PPA Record Form', 'url' => ['/record/index']],
                     ['label' => 'Checklists', 'url' => ['/checklists/index']],
+                    ['label' => 'Form Lists', 'url' => ['/forms/index']],
+                    ['label' => 'PPA Record Form', 'url' => ['/record/index']],
                     // ['label' => 'Contact', 'url' => ['/site/contact']],
                     !Yii::$app->session->get('c_user') ? (
                         ['label' => 'Login', 'url' => ['/site/login']]

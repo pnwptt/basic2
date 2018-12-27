@@ -217,6 +217,10 @@
                 </table>
                 <?php ActiveForm::end(); ?>
             </p>
+            <div align="center">
+                <?= Html::submitButton('Save', ['class'=>'btn btn-primary']); ?>
+                <button type="button" class="btn btn-default " onclick="window.history.back()">Cancel</button>
+            </div>
         </div>
     </body>
 </html>

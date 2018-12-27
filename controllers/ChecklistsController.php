@@ -16,6 +16,7 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\member;
 use app\models\checklists;
+use app\models\series;
 use app\models\type;
 
 class ChecklistsController extends Controller
@@ -32,7 +33,15 @@ class ChecklistsController extends Controller
 	}
 
 	function actionForm(){
-		return $this->render('form');
+
+		$series = new Series();
+		$seriesall = Series::find()->orderBy('n_series_name asc')->all();
+		$serieslist = ArrayHelper::map($seriesall, 'i_series_id', 'n_series_name');
+
+		return $this->render('form', [
+			'series'=>$series,
+			'serieslist'=>$serieslist,
+		]);
 	}
 }
 
