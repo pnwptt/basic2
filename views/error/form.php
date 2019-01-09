@@ -70,7 +70,7 @@
                                     </div>
                                     <!-- <div class="box-footer" align="center">
 
-                                        <button type="button" class="btn btn-default " onclick="window.history.back()">Cancel</button>
+                                        <button type="button" class="btn btn-default" onclick="window.history.back()">Cancel</button>
                                         <button type="submit" value="save" class="btn btn-primary">Submit</button>
                                     </div>/box-footer-->
                                 <?php ActiveForm::end(); ?>

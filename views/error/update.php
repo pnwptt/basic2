@@ -63,7 +63,7 @@
                                             <div class="form-group">
                                                 <div class="col-lg-12">
                                                     <?= Html::submitButton('Save', ['class'=>'btn btn-primary']); ?>
-                                                    <button type="button" class="btn btn-default " onclick="window.history.back()">Cancel</button>
+                                                    <button type="button" class="btn btn-default" onclick="window.history.back()">Cancel</button>
                                                 </div>
                                             </div>
                                         </div>

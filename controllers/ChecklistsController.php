@@ -17,34 +17,38 @@ use app\models\ContactForm;
 use app\models\member;
 use app\models\checklists;
 use app\models\series;
+use app\models\errorcode;
 use app\models\type;
 
 class ChecklistsController extends Controller
 { 
 	function actionIndex(){
-		$checklists = Checklists::find()->all();
-		return $this->render('index',[
-			'checklists'=>$checklists,
+		$checklists = Checklists::find() -> all();
+		return $this -> render('index', [
+			'checklists' => $checklists,
 		]);
     }
     
 	function actionAdd(){
-		return $this->render('Add');
+		return $this -> render('Add');
 	}
 
 	function actionForm(){
 
 		$series = new Series();
-		$seriesall = Series::find()->orderBy('n_series_name asc')->all();
+		$seriesall = Series::find() -> orderBy('n_series_name asc') -> all();
 		$serieslist = ArrayHelper::map($seriesall, 'i_series_id', 'n_series_name');
 
-		return $this->render('form', [
-			'series'=>$series,
-			'serieslist'=>$serieslist,
+		$errorcode = new Errorcode();
+		// $errorcode = Errorcode::find()->all();
+
+		return $this -> render('form', [
+			'series' => $series,
+			'serieslist' => $serieslist,
+			'errorcode' => $errorcode,
 		]);
 	}
 }
-
 // 	function actionUpdate() {
 // 		$model = Series::findOne($_GET['i_series_id']);
 // 		if ($model->load(Yii::$app->request->post())){

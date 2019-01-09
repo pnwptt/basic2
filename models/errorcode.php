@@ -11,7 +11,7 @@
 			return 'b_errorcode';
 		}
 
-		public function rules() {
+		public function rules(){
 			return [
 				[['n_errorcode', 'c_rank', 'c_code', 'i_errorcode_type_id'], 'required']
 			];
@@ -28,7 +28,7 @@
 
 		public function getType()
 		{
-			return $this->hasOne(Type::className(),['i_errorcode_type_id'=>'i_errorcode_type_id']);
+			return $this->hasOne(Type::className(), ['i_errorcode_type_id'=>'i_errorcode_type_id']);
 		}
 	}
 ?>

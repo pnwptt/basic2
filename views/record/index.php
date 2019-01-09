@@ -69,7 +69,7 @@
                                     <b>
                                         <div class="form-group" align="center">
                                              PPA Inspection Record
-                                            <?php echo $f->field($series,'i_series_id')->dropdownList($serieslist, ['style'=>'width: 120px'])->label('Series'); ?>
+                                            <?php // echo $f->field($series,'i_series_id')->dropdownList($serieslist, ['style'=>'width: 120px'])->label('Series'); ?>
                                         </div>
                                         <hr>
                                     </b>
@@ -121,10 +121,10 @@
                                 8D Report No: <input type="text" value="" size="8"><br>
                             </label>   
                         </td>
-                        <td class="" width="" align="center">
-                            <label>Check by  <input type="text" value="" size="11"><br></label>&nbsp;
+                        <td width="" align="center">
+                            <label>Check by  <input type="text" value="" size="11"><br></label> &nbsp;
                             <label>Date: <input type="date" value="" ></label><br><hr>
-                            <label>Approved by <input type="text" value="" size="8"></label>&nbsp;
+                            <label>Approved by <input type="text" value="" size="8"></label> &nbsp;
                             <label>Date: <input type="date" value=""></label><br>
                         </td>
                     </tr>

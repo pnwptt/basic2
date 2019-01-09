@@ -58,8 +58,7 @@
                                                     <td align="center"><?php echo $records->c_status;?></td>
                                                     <td align="center">
                                                         <div class="box-footer" align="center">
-                                                            <span><?=  // $options = ['class' => 'btn btn-xs btn-danger',] ['$e'=>'i_errorcode_id']
-                                                                Html::a('Update', ['update', 'i_checklists_id'=> $records->i_checklists_id], ['class'=> 'label label-default'] );?></span>
+                                                            <span><?= Html::a('Update', ['update', 'i_checklists_id'=> $records->i_checklists_id], ['class'=> 'label label-default'] );?></span>
                                                           
                                                             <!-- <button type="button" class="btn btn-success" href="/edit/" onClick="addHtmlTableRow()"><i class="fa fa-edit"></i></button> -->
                                                             <span><?= Html::a('Delete', ['delete', 'i_checklists_id'=> $records->i_checklists_id], ['class' => 'label label-danger',

@@ -25,7 +25,7 @@
         <div id="page-wrapper" style="min-height: 99px;">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="page-header" style="color:#930000" >Checklists</h2>
+                    <h2 class="page-header" style="color:#930000">Checklists</h2>
                 </div>
             </div>
             <div class="row">
@@ -49,14 +49,48 @@
                                             <div align="center">
                                                 <?php echo $f->field($series, 'i_series_id')->dropdownList($serieslist, ['style'=>'width: 120px'])->label('Series'); ?>
                                             </div>
-                                            <table width="100%" class="table table-striped table-bordered table-hover dataTable on-footer dtr-inline" id="dataTables-example" role="grid" aria-describedby="dataTables-example-info" style="width: 100%;">
+                                            <div class="col-sm-12">
+                                                <div class="row"><b>Measurement Errorcode</b></div>
+                                            </div>
+                                            Errorcode : <input type="text" >
+                                            <table width="100%" class="table table-striped table-bordered table-hover dataTable on-footer dtr-inline" id="dataTables-example" role="grid" aria-describedby="dataTables-example-info" style="width: 100%; border">
                                                 <thead>
                                                     
                                                 </thead>
                                                 <tbody>
-                                                    
+                                                    <?php //foreach ($errorcode as $e):?>
+                                                        <tr>
+                                                            <th></th>
+                                                        </tr>
+                                                    <?php //endforeach;?>
                                                 </tbody>
                                             </table>
+                                            <div class="col-sm-12">
+                                                <div class="row"><b>Test Specification Errorcode</b></div>
+                                            </div>
+                                            Errorcode : <input type="text" >
+                                            <table width="100%" class="table table-striped table-bordered table-hover dataTable on-footer dtr-inline" id="dataTables-example" role="grid" aria-descibedby="dataTables-example-info" style="width: 100%;">
+                                                <thead>
+                                                    
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="row" align="center">
+                                                <div class="form-group">
+                                                    <div class="col-lg-12">
+                                                        <div>
+                                                            <?= Html::submitButton('Save', ['class'=>'btn btn-primary']); ?>
+                                                            <button type="button" class="btn btn-default" onclick="window.history.back()">Cancel</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         <?php ActiveForm::end(); ?>
                                     </div>
                                 </div>
