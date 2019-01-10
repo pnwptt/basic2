@@ -50,28 +50,61 @@
                                                 <?php echo $f->field($series, 'i_series_id')->dropdownList($serieslist, ['style'=>'width: 120px'])->label('Series'); ?>
                                             </div>
                                             <div class="col-sm-12">
-                                                <div class="row"><b>Measurement Errorcode</b></div>
+                                                <div class="row"><b>Measurement Errorcode :</b> <input type="text"><br></div>
                                             </div>
-                                            Errorcode : <input type="text" >
+                                            <!-- Errorcode : <input type="text"><br> -->
+                                            <div class="col-sm-4">
+                                                <table width="100%" class="table table-striped table-bordered table-hover dataTable on-footer dtr-inline" id="dataTables-example" role="grid" aria-describedby="dataTables-example-info" style="width: 100%; border">
+                                                    <thead>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php //foreach ($errorcode as $e):?>
+                                                            <tr>
+                                                                <th> 
+                                                                    <!-- errorcodeทั้งหมด  -->
+                                                                </th>
+                                                            </tr>
+                                                            <tr>
+                                                                <th></th>
+                                                            </tr>
+                                                        <?php //endforeach;?>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-sm-3" align="center">
+                                                <button type="submit" class="btn btn-xs btn-success">Add</button><br>
+                                                <button type="submit" class="btn btn-xs btn-default">Delete</button><br>
+                                            </div>
+                                            <div class="col-sm-4">
                                             <table width="100%" class="table table-striped table-bordered table-hover dataTable on-footer dtr-inline" id="dataTables-example" role="grid" aria-describedby="dataTables-example-info" style="width: 100%; border">
                                                 <thead>
                                                     
                                                 </thead>
                                                 <tbody>
-                                                    <?php //foreach ($errorcode as $e):?>
+                                                    <?php //foreach ($errorcode as $e): ?>
+                                                        <tr>
+                                                            <th> 
+                                                                <!-- errorcode ที่เลือก -->
+                                                            </th>
+                                                        </tr>
                                                         <tr>
                                                             <th></th>
                                                         </tr>
                                                     <?php //endforeach;?>
                                                 </tbody>
                                             </table>
-                                            <div class="col-sm-12">
-                                                <div class="row"><b>Test Specification Errorcode</b></div>
                                             </div>
-                                            Errorcode : <input type="text" >
+                                            <div class="col-sm-12">
+                                                <div class="row"><b>Test Specification Errorcode :</b> <input type="text"><br> </div>
+                                            </div>
+                                            <div class="col-sm-4">
                                             <table width="100%" class="table table-striped table-bordered table-hover dataTable on-footer dtr-inline" id="dataTables-example" role="grid" aria-descibedby="dataTables-example-info" style="width: 100%;">
                                                 <thead>
-                                                    
+                                                    <tr>
+                                                        <td>
+
+                                                        </td>
+                                                    </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
@@ -81,6 +114,29 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
+                                            </div>
+                                            <div class="col-sm-3" align="center">
+                                                <button type="submit" class="btn btn-xs btn-success">Add</button><br>
+                                                <button type="submit" class="btn btn-xs btn-default">Delete</button><br>
+                                            </div>
+                                            <div class="col-sm-4">
+                                            <table width="100%" class="table table-striped table-bordered table-hover dataTable on-footer dtr-inline" id="dataTables-example" role="grid" aria-descibedby="dataTables-example-info" style="width: 100%;">
+                                                <thead>
+                                                    <tr>
+                                                        <td>
+
+                                                        </td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            </div>
                                             <div class="row" align="center">
                                                 <div class="form-group">
                                                     <div class="col-lg-12">
