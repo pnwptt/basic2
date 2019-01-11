@@ -46,76 +46,42 @@
                                             'options' => ['enctype'=>'multipart/form-data']
                                         ]); ?> 
                                         <div class="col-sm-12">
-                                            <div align="center">
+                                            <div >
                                                 <?php echo $f->field($series, 'i_series_id')->dropdownList($serieslist, ['style'=>'width: 120px'])->label('Series'); ?>
                                             </div>
-                                            <div class="col-sm-12">
-                                                <div class="row"><b>Measurement Errorcode :</b> <input type="text"><br></div>
+                                            <div class="col-sm-4">
+                                                <div class="row">Measurement : <input type="text"></div>
                                             </div>
-                                            <!-- Errorcode : <input type="text"><br> -->
+                                            <div class="col-sm-4" align="center">
+                                                <button type="submit" class="btn btn-xs btn-success">Add</button><br>
+                                                <button type="submit" class="btn btn-xs btn-default">Delete</button><br>
+                                            </div>
                                             <div class="col-sm-4">
                                                 <table width="100%" class="table table-striped table-bordered table-hover dataTable on-footer dtr-inline" id="dataTables-example" role="grid" aria-describedby="dataTables-example-info" style="width: 100%; border">
                                                     <thead>
+                                                        <tr>
+                                                            <th scope="col">Errorcode</th>
+                                                            <th scope="col">Inspection detail</th>
+                                                        </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <?php //foreach ($errorcode as $e):?>
+                                                        <?php //foreach ($errorcode as $e): ?>
                                                             <tr>
-                                                                <th> 
-                                                                    <!-- errorcodeทั้งหมด  -->
-                                                                </th>
-                                                            </tr>
-                                                            <tr>
-                                                                <th></th>
+                                                                <td>
+                                                                    <!-- แสดง Errorcode หลังจากที่แอดมา -->
+                                                                </td>
+                                                                <td>
+                                                                
+                                                                </td>
                                                             </tr>
                                                         <?php //endforeach;?>
                                                     </tbody>
                                                 </table>
                                             </div>
-                                            <div class="col-sm-3" align="center">
-                                                <button type="submit" class="btn btn-xs btn-success">Add</button><br>
-                                                <button type="submit" class="btn btn-xs btn-default">Delete</button><br>
-                                            </div>
                                             <div class="col-sm-4">
-                                            <table width="100%" class="table table-striped table-bordered table-hover dataTable on-footer dtr-inline" id="dataTables-example" role="grid" aria-describedby="dataTables-example-info" style="width: 100%; border">
-                                                <thead>
-                                                    
-                                                </thead>
-                                                <tbody>
-                                                    <?php //foreach ($errorcode as $e): ?>
-                                                        <tr>
-                                                            <th> 
-                                                                <!-- errorcode ที่เลือก -->
-                                                            </th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th></th>
-                                                        </tr>
-                                                    <?php //endforeach;?>
-                                                </tbody>
-                                            </table>
+                                                <div class="row">Test Specification : <input type="text"> </div>
                                             </div>
-                                            <div class="col-sm-12">
-                                                <div class="row"><b>Test Specification Errorcode :</b> <input type="text"><br> </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                            <table width="100%" class="table table-striped table-bordered table-hover dataTable on-footer dtr-inline" id="dataTables-example" role="grid" aria-descibedby="dataTables-example-info" style="width: 100%;">
-                                                <thead>
-                                                    <tr>
-                                                        <td>
-
-                                                        </td>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            </div>
-                                            <div class="col-sm-3" align="center">
+                                            <div class="col-sm-4" align="center">
                                                 <button type="submit" class="btn btn-xs btn-success">Add</button><br>
                                                 <button type="submit" class="btn btn-xs btn-default">Delete</button><br>
                                             </div>
@@ -123,15 +89,17 @@
                                             <table width="100%" class="table table-striped table-bordered table-hover dataTable on-footer dtr-inline" id="dataTables-example" role="grid" aria-descibedby="dataTables-example-info" style="width: 100%;">
                                                 <thead>
                                                     <tr>
-                                                        <td>
-
-                                                        </td>
+                                                        <th scope="col">Errorcode</th>
+                                                        <th scope="col">Inspection detail</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td>
                                                             
+                                                        </td>
+                                                        <td>
+                                                        
                                                         </td>
                                                     </tr>
                                                 </tbody>

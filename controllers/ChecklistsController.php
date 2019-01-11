@@ -40,7 +40,7 @@ class ChecklistsController extends Controller
 		$serieslist = ArrayHelper::map($seriesall, 'i_series_id', 'n_series_name');
 
 		$errorcode = new Errorcode();
-		// $errorcode = Errorcode::find()->all();
+		$errorcode = Errorcode::find()->all();
 
 		return $this -> render('form', [
 			'series' => $series,
