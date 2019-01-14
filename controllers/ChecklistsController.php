@@ -39,13 +39,16 @@ class ChecklistsController extends Controller
 		$seriesall = Series::find() -> orderBy('n_series_name asc') -> all();
 		$serieslist = ArrayHelper::map($seriesall, 'i_series_id', 'n_series_name');
 
-		$errorcode = new Errorcode();
-		$errorcode = Errorcode::find()->all();
-
 		return $this -> render('form', [
 			'series' => $series,
 			'serieslist' => $serieslist,
-			'errorcode' => $errorcode,
+		]);
+	}
+
+	function actionList(){
+		$errorcode_list = Checklists::getChecklist($_GET["i_series_id"], $_GET["on_list"]);
+		return $this -> render('list', [
+			'errorcode_list' => $errorcode_list,
 		]);
 	}
 }

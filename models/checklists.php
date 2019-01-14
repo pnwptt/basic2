@@ -15,7 +15,16 @@ class Checklists extends ActiveRecord{
 	{
 		return $this->hasOne(Series::className(),['i_series_id'
 			=>'i_series_id']);
-	}
+  }
+  
+  public static function getChecklist($i_series_id, $on_list=true){
+    if($on_list) {
+      // query errorcode on list
+    } else {
+      // query errorcode not on list
+    }
+    // return list;
+  }
 
 //   public function rules() {
 //   	return [
